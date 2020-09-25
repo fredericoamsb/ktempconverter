@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="16dp">
-    
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
     <EditText
+        android:id="@+id/valorTemp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/valorTemp"
-        android:hint="Digite a temperatura"
+        android:hint="@string/et_hint"
         android:inputType="numberDecimal" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroup">
+        android:layout_height="wrap_content">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Celcius"
             android:id="@+id/celciusRadio"
-            android:checked="false" />
-
-        <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fahreinheit"
+            android:checked="false"
+            android:text="@string/rb_label_celcius" />
+
+        <RadioButton
             android:id="@+id/fahreinheitRadio"
-            android:checked="true" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/rb_label_fahreinheit" />
     </RadioGroup>
-    
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/converterButton"
-        android:text="CONVERTER TEMPERATURA" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:enabled="false"
+        android:alpha="0.7"
+        android:text="@string/btn_converter"
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
